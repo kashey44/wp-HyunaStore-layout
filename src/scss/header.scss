@@ -1,0 +1,102 @@
+.header{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    min-height: 90px;
+    align-items: center;
+    .logo{
+        display: flex;
+        align-items: center;
+        b{
+            text-transform: uppercase;
+            color: #247CC0;
+            padding: 0 8px;
+        }
+    }
+    .navigation{
+        
+        ul{
+            display: flex;
+            align-items: center;
+            .navigation__item{
+                margin-right: 40px;
+                display: flex;
+                align-items: center;
+                a{
+                    text-transform: uppercase;
+                    
+                }
+                &.navigation__item_hassubmenu{
+                    &::after{       
+                        content: '';
+                        height: 6px;
+                        width: 10px;
+                        margin-left: 8px;
+                        background: url('./img/arrow_down.svg') no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .user-menu{
+        display: flex;
+        align-items: center;
+        
+        .search-form{
+            position: relative;
+            padding-left: 120px;
+            .search-form__label, .search-form__submit{
+                padding: 0;
+                width: 18px;
+                height: 18px;
+                border: 0;
+                background: url('./img/search_icon.svg') no-repeat;
+                cursor: pointer;
+            }
+            .search-form__text, .search-form__submit{
+                position: fixed;
+                top: -100px;
+            }
+            .search-form__text{
+                max-width: 100px;
+            }
+            .search-form__text:focus{
+                position: absolute;
+                top: 0;
+                left: 0;
+                &+.search-form__label{
+                    position: fixed;
+                    top: -100px;
+                    &+.search-form__submit{
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+                
+            }
+            
+        }
+        .cart-small{
+            padding: 0;
+            width: 18px;
+            height: 18px;
+            border: 0;
+            background: url('./img/cart_icon.svg') no-repeat;
+            margin: 0 30px;
+        }
+        .user-menu{
+            padding: 0;
+            width: 35px;
+            height: 35px;
+            border: 0;
+            background: url('./img/user_icon.svg') no-repeat;
+            cursor: pointer;
+            .user-menu__options{
+                &.user-menu__options_hidden{
+                    display: none;
+                }
+            }
+        }
+    }
+}

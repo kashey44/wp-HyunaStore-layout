@@ -1,0 +1,33 @@
+.row.header   
+    a(href="/").logo
+        img(src="./img/logo-small.svg", alt="")
+        b HyunaStore
+
+    nav.navigation
+        ul 
+            li.navigation__item.navigation__item_hassubmenu
+                a(href="#") Home
+            li.navigation__item.navigation__item_hassubmenu
+                a(href="#") About
+            li.navigation__item.navigation__item_hassubmenu
+                a(href="#") Product
+            li.navigation__item.navigation__item_hassubmenu
+                a(href="#") blog
+            li.navigation__item.navigation__item_hassubmenu
+                a(href="#") shop
+            li.navigation__item
+                a(href="#") Contact us
+
+    .user-menu
+        form(action="/", method="GET").search-form
+            input(id="search-input", type="text").search-form__text
+            label(for="search-input").search-form__label             
+            button.search-form__submit
+        a(href="#").cart-small             
+        .user-menu
+            ul.user-menu__options.user-menu__options_hidden
+                li
+                    a(href="#") Sign up
+                li
+                    a(href="#") Sign in
+                

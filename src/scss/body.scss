@@ -18,9 +18,7 @@ body{
         font-weight: 400;
         list-style: none;
         li{
-            padding-left: 7px;
-            padding-bottom: 10px;
-            position: relative;
+            
             // &::before{
             //     position: absolute;
             //     top: 7px;
@@ -38,7 +36,7 @@ body{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 
     form{
@@ -215,9 +213,9 @@ body{
         font-size: 12px;
         line-height: 15px;
         text-decoration: none;
-        color: #BC9CFF;
+        color: $text-black;
         &:hover{
-            color: #1F204150;
+            color: $text-red-60;
         }
     }
     
