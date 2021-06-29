@@ -1,0 +1,38 @@
+mixin style-color-preview(name, hex, transparency)    
+    //img(src="./img/" + hex + (transparency != '' ? '-'+transparency : "") + ".svg", alt=name)
+    .color-pattern(style="background-color: #" + hex + transparency)
+    h2
+        b= name
+        span= '#' + hex                
+-
+    var colors = [
+        ['Dark Shade 100%', '1F2041', ''],
+        ['Dark Shade 75%', '1F2041', '75'],
+        ['Dark Shade 50%', '1F2041', '50'],
+        ['Dark Shade 25%', '1F2041', '25'],
+        ['Dark Shade 5%', '1F2041', '05'],
+        ['Purple', 'BC9CFF', ''],
+        ['Green', '6FCF97', ''],        
+    ]
+.style-preview
+    .color-patterns
+        ul
+            each color in colors 
+                li         
+                    +style-color-preview(color[0], color[1], color[2])
+
+    .headers-pattern
+        ul 
+            li
+                h1(data-name="H1") 
+                    span This one is the sub-section or </br>widget title
+            li
+                h2(data-name="H2") 
+                    span Next one is the item title inside <br />widgets
+            li
+                h3(data-name="H3") 
+                    span This is a label or CTA text
+            li
+                p(data-name="Body") 
+                    span This is the body text which is used for most<br /> of the design, like paragraphs, lists, etc.
+        

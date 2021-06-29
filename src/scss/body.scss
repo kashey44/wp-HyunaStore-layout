@@ -1,0 +1,255 @@
+body{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #E5E5E5;
+
+    color: #1F2041;
+    font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;        
+        
+
+    h1{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    h2{ 
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+    }
+    h3{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    p{
+        /* Dark 75% */
+        color: rgba(31, 32, 65, 0.75);
+        text-transform: none;
+        font-weight: 400;
+        color: #1F204150;
+    }
+    form{
+        label{
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            display: block;
+            margin: 5px 0;
+            &.__checkbox-label, &.__switch-label{                
+                color: rgba(31, 32, 65, 0.5);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                text-transform: none;
+                padding-left: 9.74px;
+                margin-right: 20px;              
+            }
+            &.__switch-label{
+                color: rgba(31, 32, 65, 0.75);
+            }
+
+        }
+        fieldset{
+            border: 0;            
+            input[type="text"]::placeholder{
+                color: #1F204125;
+            }
+            input[type="submit"]{
+                min-width: 100%;
+                max-width: 320px;
+                padding: 12px 0;
+                background: url('./img/arrow_forward_white.svg') no-repeat 96%, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                
+                border-radius: 22px;
+                border: 2px solid  #BC9CFF;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;                
+                text-transform: uppercase;
+                color: #fff;
+                cursor: pointer;
+                &:focus{
+                    background: #fff;
+                    color: #BC9CFF;
+                }
+            }
+            input[type="email"], input[type="date"], input[type="text"], select{
+                background: #FFFFFF;
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                box-sizing: border-box;
+                border-radius: 4px;
+                padding: 11px 15px;
+                line-height: 20px;
+                color: #1F204175;
+                width: 100%;
+                max-width: 320px;
+                letter-spacing: -0.015em;
+            }
+            input[type="date"]{
+                min-width: 150px;
+                max-width: 150px;
+                padding-right: 0;
+                padding-top: 10px;
+                padding-left: 13px;
+                text-transform: uppercase;
+            }
+            select{
+                padding: 11px 11px;
+            }
+            input[type="email"]:focus, input[type="date"]:focus, input[type="text"]:focus, input[type="text"].focus, select:focus{
+                outline: none;
+                border: 1px solid rgba(31, 32, 65, 0.5);
+                color: #1F2041;
+            }
+            input[type="checkbox"]{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: #FFFFFF;
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                box-sizing: border-box;
+                border-radius: 4px;
+                margin-top: 4px;
+                &:checked{
+                    display: none;
+                    & + label{
+                        position: relative;
+                        display: block;
+                        padding-left: 30px;
+                    }
+                    & + label::before{
+                        box-sizing: border-box;
+                        display: inline-block;
+                        position: absolute;
+                        top: -1px;
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        margin-left: -30px;
+                        
+                        background: url('./img/checked.svg') no-repeat;
+                    }
+                }
+            }
+            input[type="radio"]{
+                width: 20px;
+                height: 20px;
+                background: #FFFFFF;                
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                box-sizing: border-box;
+                border-radius: 10px;
+            }
+            input[name="date-range"], input[type="email"]{
+                max-width: 266px;
+            }
+            
+            &.__checkbox-fieldset, &.__radio-fieldset, &.__toggle-fieldset{
+                .form-element{
+                    display: flex;
+                    align-items: flex-start;;
+                    justify-content: flex-start;
+                    margin-bottom: 3px;
+                }
+            }
+            &.__checkbox-fieldset{
+                label.__label{
+                    margin-bottom: 1em;
+                }
+            }
+            &.__radio-fieldset{
+                .form-element{
+                    display: inline-flex;
+                    padding-top: 6px;
+                }
+                //display: flex;
+                //align-items: center;
+                //justify-content: flex-start;
+            }
+            
+            
+        }
+    }
+    button{
+        padding: 12px 17px;
+        border: 2px solid  #BC9CFF;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;       
+        text-transform: uppercase;
+        color: #FFFFFF;
+        cursor: pointer;
+        &:disabled{
+            cursor: default;
+            opacity: 0.5;
+        }
+        &:hover{
+            color: #BC9CFF;
+            background: #fff;
+        }
+    }
+    a{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-decoration: none;
+        color: #BC9CFF;
+        &:hover{
+            color: #1F204150;
+        }
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .form-elements{
+        min-width: 345px;
+        .form-element{
+            margin-bottom: 20px;
+        }
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+        color: #1F204175;
+        font-weight: 400;
+        list-style: none;
+        li{
+            padding-left: 7px;
+            padding-bottom: 10px;
+            position: relative;
+            &::before{
+                position: absolute;
+                top: 7px;
+                left: -15px;
+                display: block;
+                content: '';
+                width: 11px;
+                height: 10px;
+                background: url('./img/Ellipse.svg') no-repeat;
+            }
+        }
+    }
+}

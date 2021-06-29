@@ -1,0 +1,15 @@
+@import 'scss/variables';
+@import 'normalize.css';
+@import 'scss/fonts';
+@import 'scss/fa-scss/fontawesome';
+@import 'scss/body';
+@import 'scss/mixins';
+@import 'scss/content';
+
+
+@mixin bg-color($color, $transparency){
+    background: {
+        color: $color + $transparency;
+    }
+}
+

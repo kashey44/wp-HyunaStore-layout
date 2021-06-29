@@ -1,0 +1,30 @@
+@mixin margin-handler($marginType, $value: 0px, $frPart: 0){
+    #{$marginType}: #{$value + '.' + $frPart}px !important    
+}
+
+
+
+.mb-10{
+    @include margin-handler('margin-bottom', 10)
+}
+.mb-12{
+    @include margin-handler('margin-bottom', 12)
+}
+.mb-15{
+    @include margin-handler('margin-bottom', 15)
+}
+.mb-17{
+    @include margin-handler('margin-bottom', 17)
+}
+.mb-20{
+    @include margin-handler('margin-bottom', 20)
+}
+.mb-23{
+    @include margin-handler('margin-bottom', 23)
+}
+.mb-40{
+    @include margin-handler('margin-bottom', 40)
+}
+.mb-40-56{
+    @include margin-handler('margin-bottom', 40, 56)
+}
