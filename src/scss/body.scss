@@ -1,48 +1,46 @@
 body{
+    
+    
+    background-color: $body-bgc;
+
+    color: $text-black;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 24px;
-    background-color: #E5E5E5;
-
-    color: #1F2041;
-    font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;        
+    line-height: 21px;        
         
-
-    h1{
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-    }
-    h2{ 
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 23px;
-    }
-    h3{
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-    }
-    p{
-        /* Dark 75% */
-        color: rgba(31, 32, 65, 0.75);
-        text-transform: none;
+    ul{
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+        
         font-weight: 400;
-        color: #1F204150;
+        list-style: none;
+        li{
+            padding-left: 7px;
+            padding-bottom: 10px;
+            position: relative;
+            // &::before{
+            //     position: absolute;
+            //     top: 7px;
+            //     left: -15px;
+            //     display: block;
+            //     content: '';
+            //     width: 11px;
+            //     height: 10px;
+            //     background: url('./img/Ellipse.svg') no-repeat;
+            // }
+        }
     }
+    
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     form{
         label{
             font-weight: bold;
@@ -205,6 +203,13 @@ body{
             background: #fff;
         }
     }
+    p{
+        /* Dark 75% */
+        color: $text-black-60;
+        text-transform: none;
+        font-weight: 400;
+        
+    }
     a{
         font-weight: bold;
         font-size: 12px;
@@ -215,12 +220,7 @@ body{
             color: #1F204150;
         }
     }
-    .row{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
+    
 
     .form-elements{
         min-width: 345px;
@@ -228,28 +228,26 @@ body{
             margin-bottom: 20px;
         }
     }
-
-    ul{
-        padding: 0;
-        margin: 0;
-        margin-left: 15px;
-        color: #1F204175;
-        font-weight: 400;
-        list-style: none;
-        li{
-            padding-left: 7px;
-            padding-bottom: 10px;
-            position: relative;
-            &::before{
-                position: absolute;
-                top: 7px;
-                left: -15px;
-                display: block;
-                content: '';
-                width: 11px;
-                height: 10px;
-                background: url('./img/Ellipse.svg') no-repeat;
-            }
-        }
+    h1{
+        
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 71px;
     }
+    h2{ 
+       
+        font-style: normal;        
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 40px;
+    }
+    h3{
+        
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 40px;
+    }
+    
 }
